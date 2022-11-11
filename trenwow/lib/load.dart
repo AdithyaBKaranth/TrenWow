@@ -56,7 +56,7 @@ class LoadState extends State<Load> with TickerProviderStateMixin {
                     ClipRRect(child: Image.asset('assets/images/trenwow.png')),
                 height: selected ? 350 : 300,
                 width: selected ? 350 : 300,
-                color: selected ? Colors.white : Colors.red,
+                color: selected ? Colors.black : Colors.black,
                 duration: Duration(seconds: 2),
               ),
             ),

@@ -30,7 +30,7 @@ class Sign extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Text(
-                'Login',
+                'Sign up as',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -49,7 +49,7 @@ class Sign extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.orange)),
               label: Text(
-                'Email',
+                'Company',
                 style: TextStyle(
                   color: Colors.black,
                 ),
@@ -74,7 +74,7 @@ class Sign extends StatelessWidget {
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.orange)),
                 label: Text(
-                  'Phone',
+                  'User',
                   style: TextStyle(color: Colors.black),
                 ),
                 onPressed: () {},
@@ -115,14 +115,14 @@ class Sign extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Not registered yet?',
+              'Already have an account?',
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
-            Text(' '),
+            //Text(' '),
             TextButton(
                 onPressed: () {},
                 child: Text(
-                  'Sign up',
+                  'Sign in',
                   style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: Colors.blue,
