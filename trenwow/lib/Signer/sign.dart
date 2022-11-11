@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:trenwow/Signer/email.dart';
 
-class Sign extends StatelessWidget {
+class Sign extends StatefulWidget {
+  @override
+  State<Sign> createState() => _SignState();
+}
+
+class _SignState extends State<Sign> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,22 +51,26 @@ class Sign extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            ElevatedButton.icon(
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.orange)),
-              label: Text(
-                'Company',
-                style: TextStyle(
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 15,
+              width: MediaQuery.of(context).size.width / 3,
+              child: ElevatedButton.icon(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.orange)),
+                label: Text(
+                  'Company',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => Email()));
+                },
+                icon: Icon(
+                  Icons.email,
                   color: Colors.black,
                 ),
-              ),
-              onPressed: () {
-                //Navigator.of(context).pushReplacement(
-                //  MaterialPageRoute(builder: (context) => Email()));
-              },
-              icon: Icon(
-                Icons.email,
-                color: Colors.black,
               ),
             ),
             Text(
@@ -70,18 +80,23 @@ class Sign extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
             ),
-            ElevatedButton.icon(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.orange)),
-                label: Text(
-                  'User',
-                  style: TextStyle(color: Colors.black),
-                ),
-                onPressed: () {},
-                icon: Icon(
-                  Icons.phone_android,
-                  color: Colors.black,
-                )),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 15,
+              width: MediaQuery.of(context).size.width / 3,
+              child: ElevatedButton.icon(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.orange)),
+                  label: Text(
+                    'User',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.phone_android,
+                    color: Colors.black,
+                  )),
+            ),
           ],
         ),
         SizedBox(
