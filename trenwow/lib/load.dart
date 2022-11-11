@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/material.dart';
+import 'package:trenwow/sign.dart';
 
 class Load extends StatefulWidget {
   @override
@@ -21,7 +22,9 @@ class LoadState extends State<Load> with TickerProviderStateMixin {
       });
     });
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      _navigateToDob();
+      Future.delayed(Duration(seconds: 4), () {
+        _navigateToSign();
+      });
     });
     super.initState();
   }
@@ -32,10 +35,10 @@ class LoadState extends State<Load> with TickerProviderStateMixin {
     super.dispose();
   }
 
-  void _navigateToDob() async {
+  void _navigateToSign() async {
     await Future.delayed(Duration(milliseconds: 2000));
-    //Navigator.of(context)
-    //  .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
+    Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => Sign()));
   }
 
   @override

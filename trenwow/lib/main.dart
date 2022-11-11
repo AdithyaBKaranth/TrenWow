@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:trenwow/lang.dart';
 import 'package:trenwow/load.dart';
 
 void main() => runApp(TrenWow());
@@ -10,7 +11,7 @@ class TrenWow extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
-        home: Start());
+        home: Lang());
   }
 }
 
