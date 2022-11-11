@@ -36,18 +36,41 @@ class _StartState extends State<Start> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.black,
-        body: Column(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset('assets/images/trenwow.png'),
-              ),
-            )
+            AnimatedCrossFade(
+                firstChild: Container(
+                    height: 100,
+                    width: 300,
+                    child: Text(
+                      'Hey There..',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic),
+                    )),
+                secondChild: Container(
+                  height: 120,
+                  width: 300,
+                  child: Text(
+                    'Trenwow welcomes you... :)',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic),
+                  ),
+                ),
+                crossFadeState: _crossFadeState,
+                duration: Duration(seconds: 2))
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
