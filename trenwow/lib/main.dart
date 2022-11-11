@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:trenwow/load.dart';
 
 void main() => runApp(TrenWow());
 
@@ -28,6 +30,12 @@ class _StartState extends State<Start> {
     })).then((value) {
       setState(() {
         _crossFadeState = CrossFadeState.showSecond;
+      });
+    });
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(Duration(seconds: 6), () {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Load()));
       });
     });
     super.initState();
