@@ -1,30 +1,76 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 
-import 'package:trenwow/main.dart';
+void main() => runApp(TrenWow());
 
-void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+class TrenWow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
+        home: Start());
+  }
+}
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+class Start extends StatefulWidget {
+  @override
+  State<Start> createState() => _StartState();
+}
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+class _StartState extends State<Start> {
+  CrossFadeState _crossFadeState = CrossFadeState.showFirst;
+  @override
+  void initState() {
+    Future.delayed(Duration(seconds: 3), (() {
+      setState(() {
+        _crossFadeState = CrossFadeState.showFirst;
+      });
+    })).then((value) {
+      setState(() {
+        _crossFadeState = CrossFadeState.showSecond;
+      });
+    });
+    super.initState();
+  }
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedCrossFade(
+                firstChild: Container(
+                    height: 100,
+                    width: 300,
+                    child: Text(
+                      'Hey There..',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic),
+                    )),
+                secondChild: Container(
+                  height: 120,
+                  width: 300,
+                  child: Text(
+                    'Trenwow welcomes you... :)',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic),
+                  ),
+                ),
+                crossFadeState: _crossFadeState,
+                duration: Duration(seconds: 2))
+          ],
+        ),
+      ),
+    );
+  }
 }
