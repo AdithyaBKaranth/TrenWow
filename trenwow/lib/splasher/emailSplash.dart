@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:trenwow/themain.dart/home.dart';
 
 class EmailSplash extends StatefulWidget {
@@ -31,7 +32,7 @@ class EmailSplashState extends State<EmailSplash> {
           ),
           Center(
             child: Text(
-              'Please wait while we register company\'s account',
+              'PWWWRCA'.tr,
               style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,

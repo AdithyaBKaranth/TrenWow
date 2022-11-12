@@ -36,6 +36,7 @@ class LocalString extends Translations {
           'EYOEI': 'Enter Your Optional Email ID',
           'PO': 'Password(Optional)',
           'ETOP': 'Enter The Optional Password',
+          'PWWWRCA': 'Please Wait While We Register Company\'s Account',
         },
         'hi_IN': {
           'HT': 'आपको नमस्कार',
@@ -68,6 +69,8 @@ class LocalString extends Translations {
           'EYOEI': 'अपना वैकल्पिक ईमेल आईडी दर्ज करें',
           'PO': 'पासवर्ड (वैकल्पिक)',
           'ETOP': 'वैकल्पिक पासवर्ड दर्ज करें',
+          'PWWWRCA':
+              'कृपया प्रतीक्षा करें जब तक हम कंपनी का खाता पंजीकृत करते हैं',
         }
       };
 }
