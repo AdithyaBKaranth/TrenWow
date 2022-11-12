@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trenwow/themain.dart/home.dart';
 
 class EmailSplash extends StatefulWidget {
   @override
@@ -14,8 +15,8 @@ class EmailSplashState extends State<EmailSplash> {
 
   void _navigateToDob() async {
     await Future.delayed(Duration(milliseconds: 2000));
-    //  Navigator.of(context)
-    //  .pushReplacement(MaterialPageRoute(builder: (context) => Start()));
+    Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
   }
 
   @override
