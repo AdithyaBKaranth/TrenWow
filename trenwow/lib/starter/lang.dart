@@ -13,6 +13,10 @@ class _LangState extends State<Lang> {
       height: MediaQuery.of(context).size.height / 20,
       width: MediaQuery.of(context).size.width / 3,
       child: ElevatedButton(
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.purple[100]),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)))),
           onPressed: () {
             Navigator.pushReplacement(
                 context, MaterialPageRoute(builder: (context) => LangSplash()));
@@ -34,19 +38,19 @@ class _LangState extends State<Lang> {
           children: [
             langButton(context, 'English'),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 50,
             ),
             langButton(context, 'ಕನ್ನಡ'),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 50,
             ),
             langButton(context, 'हिंदी'),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 50,
             ),
             langButton(context, 'தமிழ்'),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 50,
             ),
             langButton(context, 'తెలుగు')
           ],

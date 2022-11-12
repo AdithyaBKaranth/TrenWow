@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trenwow/Signer/company.dart';
+import 'package:trenwow/Signer/user.dart';
 
 class Sign extends StatefulWidget {
   @override
@@ -91,7 +92,10 @@ class _SignState extends State<Sign> {
                     'User',
                     style: TextStyle(color: Colors.black),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => User()));
+                  },
                   icon: Icon(
                     Icons.phone_android,
                     color: Colors.black,

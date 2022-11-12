@@ -36,7 +36,7 @@ class LoadState extends State<Load> with TickerProviderStateMixin {
   }
 
   void _navigateToSign() async {
-    await Future.delayed(Duration(milliseconds: 2000));
+    await Future.delayed(Duration(milliseconds: 1500));
     Navigator.of(context)
         .pushReplacement(MaterialPageRoute(builder: (context) => Sign()));
   }
@@ -57,7 +57,7 @@ class LoadState extends State<Load> with TickerProviderStateMixin {
                 height: selected ? 350 : 300,
                 width: selected ? 350 : 300,
                 color: selected ? Colors.black : Colors.black,
-                duration: Duration(seconds: 2),
+                duration: Duration(milliseconds: 1500),
               ),
             ),
             SizedBox(
