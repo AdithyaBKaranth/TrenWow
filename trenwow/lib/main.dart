@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:get/get.dart';
+import 'LocaleString.dart';
+import 'package:trenwow/starter/lang.dart';
+import 'package:trenwow/starter/load.dart';
 
 void main() => runApp(TrenWow());
 
 class TrenWow extends StatelessWidget {
+  const TrenWow({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+        translations: LocalString(),
+        locale: Locale('en', 'US'),
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
-        home: Start());
+        home: Lang());
   }
 }
 
@@ -30,31 +39,31 @@ class _StartState extends State<Start> {
         _crossFadeState = CrossFadeState.showSecond;
       });
     });
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(Duration(seconds: 6), () {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Load()));
+      });
+    });
     super.initState();
   }
 
+//hi
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.black,
-        body: Column(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-<<<<<<< Updated upstream
-            Center(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset('assets/images/trenwow.png'),
-              ),
-            )
-=======
             AnimatedCrossFade(
                 firstChild: Container(
                     height: 100,
                     width: 300,
-                    child: const Text(
-                      'Hey There..',
+                    child: Text(
+                      'HT'.tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 30,
@@ -64,8 +73,8 @@ class _StartState extends State<Start> {
                 secondChild: Container(
                   height: 120,
                   width: 300,
-                  child: const Text(
-                    'TrenWow welcomes you... :)',
+                  child: Text(
+                    'TWY'.tr,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 30,
@@ -75,8 +84,9 @@ class _StartState extends State<Start> {
                 ),
                 crossFadeState: _crossFadeState,
                 duration: Duration(seconds: 2))
->>>>>>> Stashed changes
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
