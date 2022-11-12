@@ -31,10 +31,6 @@ class Settings extends StatelessWidget {
                   ),
                   radius: 28,
                 )),
-            trailing: IconButton(
-                color: Colors.white,
-                onPressed: () {},
-                icon: Icon(Icons.qr_code)),
             title: Text(
               'Name',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),

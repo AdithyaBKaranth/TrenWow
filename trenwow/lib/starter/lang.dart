@@ -66,7 +66,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('English'),
+                  child: Text('Kannada'),
                   onPressed: () {
                     var locale = Locale('hi', ';');
                     Get.updateLocale(locale);
@@ -84,7 +84,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('English'),
+                  child: Text('Tamil'),
                   onPressed: () {
                     var locale = Locale('hi', '');
                     Get.updateLocale(locale);
@@ -102,7 +102,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('English'),
+                  child: Text('Telugu'),
                   onPressed: () {
                     var locale = Locale('hi', '');
                     Get.updateLocale(locale);
