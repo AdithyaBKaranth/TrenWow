@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/starter/langSplash.dart';
-import 'package:trenwow/Signer/sign.dart';
+import 'package:trenwow/splasher/langSplash.dart';
 
 class Lang extends StatefulWidget {
   @override

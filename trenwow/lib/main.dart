@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:trenwow/Signer/sign.dart';
+
+import 'package:trenwow/starter/lang.dart';
 import 'package:trenwow/starter/load.dart';
 
 void main() => runApp(TrenWow());
@@ -11,7 +12,7 @@ class TrenWow extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
-        home: Sign());
+        home: Lang());
   }
 }
 

@@ -26,6 +26,9 @@ class LangSplashState extends State<LangSplash> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 4,
+          ),
           Center(
             child: Text(
               'Please wait...',

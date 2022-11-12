@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/Signer/email.dart';
+import 'package:trenwow/Signer/company.dart';
 
 class Sign extends StatefulWidget {
   @override
@@ -64,8 +64,8 @@ class _SignState extends State<Sign> {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => Email()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Company()));
                 },
                 icon: Icon(
                   Icons.email,
