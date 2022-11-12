@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+
+import 'package:trenwow/starter/lang.dart';
+import 'package:trenwow/starter/load.dart';
 
 void main() => runApp(TrenWow());
 
 class TrenWow extends StatelessWidget {
+  const TrenWow({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
-        home: Start());
+        home: Lang());
   }
 }
 
@@ -30,15 +36,22 @@ class _StartState extends State<Start> {
         _crossFadeState = CrossFadeState.showSecond;
       });
     });
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(Duration(seconds: 6), () {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Load()));
+      });
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.black,
-        body: Column(
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AnimatedCrossFade(
@@ -66,9 +79,10 @@ class _StartState extends State<Start> {
                   ),
                 ),
                 crossFadeState: _crossFadeState,
-                duration: Duration(milliseconds: 1200))
+                duration: Duration(seconds: 2))
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
-//hi

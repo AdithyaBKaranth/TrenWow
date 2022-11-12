@@ -14,7 +14,7 @@ class LangSplashState extends State<LangSplash> {
   }
 
   void _navigateToDob() async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(Duration(milliseconds: 2000));
     Navigator.of(context)
         .pushReplacement(MaterialPageRoute(builder: (context) => Start()));
   }

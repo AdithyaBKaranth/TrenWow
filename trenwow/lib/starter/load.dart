@@ -36,7 +36,7 @@ class LoadState extends State<Load> with TickerProviderStateMixin {
   }
 
   void _navigateToSign() async {
-    await Future.delayed(Duration(milliseconds: 1000));
+    await Future.delayed(Duration(milliseconds: 2000));
     Navigator.of(context)
         .pushReplacement(MaterialPageRoute(builder: (context) => Sign()));
   }
