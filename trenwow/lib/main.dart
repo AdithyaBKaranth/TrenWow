@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-
+import 'package:get/get.dart';
+import 'LocaleString.dart';
 import 'package:trenwow/starter/lang.dart';
 import 'package:trenwow/starter/load.dart';
 
@@ -11,7 +12,9 @@ class TrenWow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+        translations: LocalString(),
+        locale: Locale('en', 'US'),
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
         home: Lang());
@@ -59,7 +62,7 @@ class _StartState extends State<Start> {
                     height: 100,
                     width: 300,
                     child: Text(
-                      'Hey There..',
+                      'HT'.tr,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 30,
@@ -70,7 +73,7 @@ class _StartState extends State<Start> {
                   height: 120,
                   width: 300,
                   child: Text(
-                    'Trenwow welcomes you... :)',
+                    'TWY'.tr,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 30,

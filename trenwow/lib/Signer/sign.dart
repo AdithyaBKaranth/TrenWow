@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:trenwow/Signer/company.dart';
 
 class Sign extends StatefulWidget {
@@ -36,7 +37,7 @@ class _SignState extends State<Sign> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Text(
-                'Sign up as',
+                'SUA'.tr,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -58,7 +59,7 @@ class _SignState extends State<Sign> {
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.orange)),
                 label: Text(
-                  'Company',
+                  'C'.tr,
                   style: TextStyle(
                     color: Colors.black,
                   ),
@@ -74,7 +75,7 @@ class _SignState extends State<Sign> {
               ),
             ),
             Text(
-              'or',
+              'o'.tr,
               style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
@@ -88,7 +89,7 @@ class _SignState extends State<Sign> {
                       backgroundColor:
                           MaterialStateProperty.all(Colors.orange)),
                   label: Text(
-                    'User',
+                    'U'.tr,
                     style: TextStyle(color: Colors.black),
                   ),
                   onPressed: () {},
@@ -113,7 +114,7 @@ class _SignState extends State<Sign> {
               ),
             )),
             Text(
-              '     OR     ',
+              'O'.tr,
               style:
                   TextStyle(fontSize: 20, color: Colors.lightGreenAccent[400]),
             ),
@@ -130,14 +131,14 @@ class _SignState extends State<Sign> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Already have an account?',
+              'AHAA'.tr,
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
             //Text(' '),
             TextButton(
                 onPressed: () {},
                 child: Text(
-                  'Sign in',
+                  'SI'.tr,
                   style: TextStyle(
                       decoration: TextDecoration.underline,
                       color: Colors.blue,
