@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trenwow/Signer/company.dart';
+import 'package:trenwow/Signer/login.dart';
 import 'package:trenwow/Signer/user.dart';
 
 class Sign extends StatefulWidget {
@@ -140,7 +141,10 @@ class _SignState extends State<Sign> {
             ),
             //Text(' '),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
+                },
                 child: Text(
                   'SI'.tr,
                   style: TextStyle(

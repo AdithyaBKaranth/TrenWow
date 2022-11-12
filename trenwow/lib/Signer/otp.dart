@@ -1,26 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/splasher/companygstSplash.dart';
+import 'package:trenwow/splasher/otpSplash.dart';
 
-class CompanyGST extends StatelessWidget {
+class OTP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Verification',
-          style: TextStyle(
-              fontSize: 25,
-              color: Colors.amber[400],
-              fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.black,
-      ),
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height / 30,
+            height: MediaQuery.of(context).size.height / 6,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -43,11 +32,11 @@ class CompanyGST extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'GST',
+                  'Login',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.greenAccent[400]),
+                      fontSize: 20,
+                      color: Colors.deepOrange),
                 ),
               ),
             ],
@@ -59,18 +48,15 @@ class CompanyGST extends StatelessWidget {
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
               keyboardType: TextInputType.number,
-              maxLength: 15,
+              maxLength: 6,
               decoration: InputDecoration(
-                hintText: 'Enter company\'s GST number',
-                labelText: 'GST',
+                hintText: 'Enter the otp',
+                labelText: 'OTP',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
               ),
             ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height / 15,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -82,8 +68,8 @@ class CompanyGST extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => CompanyGSTSplash()));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => OTPSplash()));
                     },
                     child: Text("Next ->")),
               ),

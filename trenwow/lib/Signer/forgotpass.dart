@@ -1,26 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/splasher/companygstSplash.dart';
+import 'package:trenwow/Signer/regenPass.dart';
 
-class CompanyGST extends StatelessWidget {
+class Forgotpass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Verification',
-          style: TextStyle(
-              fontSize: 25,
-              color: Colors.amber[400],
-              fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.black,
-      ),
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height / 30,
+            height: MediaQuery.of(context).size.height / 6,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -37,32 +26,43 @@ class CompanyGST extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 20,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+          Column(
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.deepOrange),
+                    ),
+                  ),
+                ],
+              ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25),
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
                 child: Text(
-                  'GST',
+                  'Enter the OTP sent to your email id',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.greenAccent[400]),
+                      fontSize: 20,
+                      color: Colors.white),
                 ),
               ),
             ],
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 40,
-          ),
-          SizedBox(
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
+              maxLength: 6,
               keyboardType: TextInputType.number,
-              maxLength: 15,
               decoration: InputDecoration(
-                hintText: 'Enter company\'s GST number',
-                labelText: 'GST',
+                labelText: 'OTP',
+                hintText: 'OTP',
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -70,7 +70,7 @@ class CompanyGST extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 15,
+            height: MediaQuery.of(context).size.height / 50,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -82,8 +82,8 @@ class CompanyGST extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => CompanyGSTSplash()));
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Regenpass()));
                     },
                     child: Text("Next ->")),
               ),
