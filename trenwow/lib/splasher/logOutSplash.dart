@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/themain.dart/home.dart';
+import 'package:trenwow/Signer/sign.dart';
 
-class UserSplash extends StatefulWidget {
+class LogOutSplash extends StatefulWidget {
   @override
-  State<UserSplash> createState() => UserSplashState();
+  State<LogOutSplash> createState() => LogOutSplashState();
 }
 
-class UserSplashState extends State<UserSplash> {
+class LogOutSplashState extends State<LogOutSplash> {
   @override
   void initState() {
     _navigateToDob();
@@ -16,7 +16,7 @@ class UserSplashState extends State<UserSplash> {
   void _navigateToDob() async {
     await Future.delayed(Duration(milliseconds: 2000));
     Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
+        .pushReplacement(MaterialPageRoute(builder: (context) => Sign()));
   }
 
   @override
@@ -31,7 +31,7 @@ class UserSplashState extends State<UserSplash> {
           ),
           Center(
             child: Text(
-              'Please wait while we register you',
+              'Logging you out...',
               style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
