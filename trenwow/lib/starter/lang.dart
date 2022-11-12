@@ -22,6 +22,8 @@ class _LangState extends State<Lang> {
               width: MediaQuery.of(context).size.width / 3,
               child: ElevatedButton(
                   style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
                   child: Text('English'),
@@ -40,6 +42,8 @@ class _LangState extends State<Lang> {
               width: MediaQuery.of(context).size.width / 3,
               child: ElevatedButton(
                   style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
                   child: Text('Hindi'),
@@ -58,6 +62,8 @@ class _LangState extends State<Lang> {
               width: MediaQuery.of(context).size.width / 3,
               child: ElevatedButton(
                   style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
                   child: Text('English'),
@@ -74,6 +80,8 @@ class _LangState extends State<Lang> {
               width: MediaQuery.of(context).size.width / 3,
               child: ElevatedButton(
                   style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
                   child: Text('English'),
@@ -90,6 +98,8 @@ class _LangState extends State<Lang> {
               width: MediaQuery.of(context).size.width / 3,
               child: ElevatedButton(
                   style: ButtonStyle(
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
                   child: Text('English'),

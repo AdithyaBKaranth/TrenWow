@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:trenwow/Signer/companygst.dart';
+import 'package:trenwow/themain.dart/home.dart';
 
-class EmailSplash extends StatefulWidget {
+class CompanyGSTSplash extends StatefulWidget {
   @override
-  State<EmailSplash> createState() => EmailSplashState();
+  State<CompanyGSTSplash> createState() => CompanyGSTSplashState();
 }
 
-class EmailSplashState extends State<EmailSplash> {
+class CompanyGSTSplashState extends State<CompanyGSTSplash> {
   @override
   void initState() {
     _navigateToDob();
@@ -16,7 +17,7 @@ class EmailSplashState extends State<EmailSplash> {
   void _navigateToDob() async {
     await Future.delayed(Duration(milliseconds: 2000));
     Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => CompanyGST()));
+        .pushReplacement(MaterialPageRoute(builder: (context) => Home()));
   }
 
   @override
@@ -31,7 +32,7 @@ class EmailSplashState extends State<EmailSplash> {
           ),
           Center(
             child: Text(
-              'Please wait while we register company\'s account',
+              'Please wait while we verify...',
               style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
