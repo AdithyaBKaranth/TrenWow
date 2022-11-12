@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/Signer/sign.dart';
+
 import 'package:trenwow/splasher/logOutSplash.dart';
 
 import '../contacts/contacts.dart';
-import '../contacts/newgroup.dart';
+
 import '../dropdown/prof.dart';
 import '../dropdown/settings.dart';
 import '../marketplace/marketPlace.dart';
@@ -17,7 +17,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<String> contents = [
     'profile',
-    'New group',
     'New broadcast',
     'Favourites',
     'Payments',
@@ -57,6 +56,8 @@ class _HomeState extends State<Home> {
                       Icons.search,
                     )),
                 PopupMenuButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
                   color: Colors.grey,
                   itemBuilder: (context) {
                     return contents
@@ -64,14 +65,13 @@ class _HomeState extends State<Home> {
                             value: e,
                             child: Text(
                               e,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             )))
                         .toList();
                   },
                   onSelected: (value) {
-                    if (value == 'New group')
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => NewGroup()));
                     if (value == 'profile')
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) => Prof()));
