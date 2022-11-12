@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:trenwow/splasher/emailSplash.dart';
 
@@ -36,7 +37,7 @@ class Company extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Sign Up',
+                  'SU'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -54,7 +55,7 @@ class Company extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Name',
+                  'N'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -70,8 +71,8 @@ class Company extends StatelessWidget {
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Enter the company\'s name',
-                labelText: 'Name',
+                hintText: 'ETCN'.tr,
+                labelText: 'N'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -87,7 +88,7 @@ class Company extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Phone',
+                  'P'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -118,7 +119,7 @@ class Company extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'About',
+                  'A'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -134,8 +135,8 @@ class Company extends StatelessWidget {
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Enter company\'s bio',
-                labelText: 'About',
+                hintText: 'ECB'.tr,
+                labelText: 'A'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -151,7 +152,7 @@ class Company extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Address',
+                  'Ad'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -168,8 +169,8 @@ class Company extends StatelessWidget {
             child: TextField(
               maxLength: 250,
               decoration: InputDecoration(
-                labelText: 'Address',
-                hintText: 'Enter the company\'s address',
+                labelText: 'Ad'.tr,
+                hintText: 'ETCA'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -185,7 +186,7 @@ class Company extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Email',
+                  'E'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -201,8 +202,8 @@ class Company extends StatelessWidget {
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
               decoration: InputDecoration(
-                labelText: 'Email',
-                hintText: 'Enter the company \'s email id',
+                labelText: 'E'.tr,
+                hintText: 'ETCEI'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -218,7 +219,7 @@ class Company extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Password',
+                  'PWD'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -235,8 +236,8 @@ class Company extends StatelessWidget {
             child: TextField(
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Password',
-                hintText: 'Enter the email id\'s password',
+                labelText: 'PWD'.tr,
+                hintText: 'ETEIP'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -259,7 +260,7 @@ class Company extends StatelessWidget {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => EmailSplash()));
                     },
-                    child: Text("Next ->")),
+                    child: Text("NXT".tr)),
               ),
             ],
           )

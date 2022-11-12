@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:trenwow/splasher/emailSplash.dart';
 
@@ -38,7 +39,7 @@ class User extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Sign Up',
+                  'SU'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -56,7 +57,7 @@ class User extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Name',
+                  'N'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -72,8 +73,8 @@ class User extends StatelessWidget {
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Enter your full name',
-                labelText: 'Name',
+                hintText: 'EYFN'.tr,
+                labelText: 'N'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -89,7 +90,7 @@ class User extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Phone',
+                  'P'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -120,7 +121,7 @@ class User extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Address',
+                  'Ad'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -137,8 +138,8 @@ class User extends StatelessWidget {
             child: TextField(
               maxLength: 250,
               decoration: InputDecoration(
-                labelText: 'Address',
-                hintText: 'Enter your address',
+                labelText: 'Ad'.tr,
+                hintText: 'EYA'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -154,7 +155,7 @@ class User extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Email',
+                  'E'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -170,8 +171,8 @@ class User extends StatelessWidget {
             width: MediaQuery.of(context).size.height / 3,
             child: TextField(
               decoration: InputDecoration(
-                labelText: 'Email(optional)',
-                hintText: 'Enter your email id(optional)',
+                labelText: 'EO'.tr,
+                hintText: 'EYOEI'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -187,7 +188,7 @@ class User extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Password',
+                  'PWD'.tr,
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -204,8 +205,8 @@ class User extends StatelessWidget {
             child: TextField(
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Password(optional)',
-                hintText: 'Enter the  password(optional)',
+                labelText: 'PO'.tr,
+                hintText: 'ETOP'.tr,
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)),
@@ -228,7 +229,7 @@ class User extends StatelessWidget {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => UserSplash()));
                     },
-                    child: Text("Next ->")),
+                    child: Text("NXT".tr)),
               ),
             ],
           )
