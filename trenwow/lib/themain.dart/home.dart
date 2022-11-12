@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:trenwow/splasher/logOutSplash.dart';
 
@@ -16,12 +17,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<String> contents = [
-    'profile',
-    'New broadcast',
-    'Favourites',
-    'Payments',
-    'Settings',
-    'Logout'
+    'p'.tr,
+    'NB'.tr,
+    'F'.tr,
+    'PMT'.tr,
+    'S'.tr,
+    'LO'.tr,
   ];
   @override
   Widget build(BuildContext context) {
@@ -40,12 +41,15 @@ class _HomeState extends State<Home> {
                   indicatorColor: Colors.redAccent[700],
                   indicatorSize: TabBarIndicatorSize.label,
                   tabs: [
-                    FittedBox(child: Text('HOME')),
-                    FittedBox(child: Text('MARKETPLACE')),
-                    FittedBox(child: Text('CALLS'))
+                    FittedBox(child: Text('H'.tr)),
+                    FittedBox(child: Text('M'.tr)),
+                    FittedBox(child: Text('c'.tr))
                   ]),
               centerTitle: true,
-              title: Text('Trenwow'),
+              title: Text(
+                'Trenwow',
+                style: TextStyle(color: Colors.redAccent[700]),
+              ),
               leading: Image.asset(
                 'assets/images/trenwow.png',
               ),
@@ -72,13 +76,13 @@ class _HomeState extends State<Home> {
                         .toList();
                   },
                   onSelected: (value) {
-                    if (value == 'profile')
+                    if (value == 'p'.tr)
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) => Prof()));
-                    if (value == 'Settings')
+                    if (value == 'S'.tr)
                       Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) => Settings()));
-                    if (value == 'Logout')
+                    if (value == 'LO'.tr)
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => LogOutSplash()));
                   },

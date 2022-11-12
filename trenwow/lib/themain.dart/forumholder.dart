@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../dropdown/prof.dart';
 import '../message/insider.dart';
@@ -65,7 +66,7 @@ class _ForumHolderState extends State<ForumHolder> {
                 ),
               ),
               Text(
-                'name',
+                'N'.tr,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
                 textAlign: TextAlign.start,
               ),
@@ -249,7 +250,7 @@ class _ForumHolderState extends State<ForumHolder> {
             ],
           ),
           Text(
-            'Descripton of the product',
+            'DOP'.tr,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           Row(

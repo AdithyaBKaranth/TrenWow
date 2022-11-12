@@ -37,6 +37,17 @@ class LocalString extends Translations {
           'PO': 'Password(Optional)',
           'ETOP': 'Enter The Optional Password',
           'PWWWRCA': 'Please Wait While We Register Company\'s Account',
+          'H': 'Home',
+          'M': 'Marketplace',
+          'c': 'Calls',
+          'p': 'Profile',
+          'NB': 'New Broadcast',
+          'F': 'Favorites',
+          'PMT': 'Payments',
+          'S': 'Settings',
+          'LO': 'Log Out',
+          'PWWWRY': 'Please Wait While We Register You',
+          'DOP': 'Description Of The Product',
         },
         'hi_IN': {
           'HT': 'आपको नमस्कार',
@@ -71,6 +82,17 @@ class LocalString extends Translations {
           'ETOP': 'वैकल्पिक पासवर्ड दर्ज करें',
           'PWWWRCA':
               'कृपया प्रतीक्षा करें जब तक हम कंपनी का खाता पंजीकृत करते हैं',
+          'H': 'होम',
+          'M': 'बाज़ार',
+          'c': 'कॉल',
+          'p': 'प्रोफ़ाइल',
+          'NB': 'नया प्रसारण',
+          'F': 'पसंदीदा',
+          'PMT': 'भुगतान',
+          'S': 'सेटिंग्स',
+          'LO': 'लॉग आउट करें',
+          'PWWWRY': 'कृपया प्रतीक्षा करें जब तक हम आपको पंजीकृत करते हैं',
+          'DOP': 'उत्पाद का विवरण',
         }
       };
 }

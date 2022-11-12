@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:trenwow/themain.dart/home.dart';
 
 class UserSplash extends StatefulWidget {
@@ -31,7 +32,7 @@ class UserSplashState extends State<UserSplash> {
           ),
           Center(
             child: Text(
-              'Please wait while we register you',
+              'PWWWRY'.tr,
               style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
