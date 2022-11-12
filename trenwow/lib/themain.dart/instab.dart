@@ -29,6 +29,7 @@ class _InstabState extends State<Instab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         toolbarHeight: 1,
         // title: Text(_pages[_selectedPage]['title']),

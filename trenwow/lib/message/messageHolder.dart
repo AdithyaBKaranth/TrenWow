@@ -16,6 +16,10 @@ class MsgHold extends StatelessWidget {
       child: ListTile(
         leading: GestureDetector(
             child: CircleAvatar(
+              child: Icon(
+                Icons.person,
+                color: Colors.black,
+              ),
               backgroundColor: Colors.purple,
             ),
             onTap: () {

@@ -45,7 +45,10 @@ class _HomeState extends State<Home> {
                     FittedBox(child: Text('CALLS'))
                   ]),
               centerTitle: true,
-              title: Text('Trenwow'),
+              title: Text(
+                'Trenwow',
+                style: TextStyle(color: Colors.red),
+              ),
               leading: Image.asset(
                 'assets/images/trenwow.png',
               ),

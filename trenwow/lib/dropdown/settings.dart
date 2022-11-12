@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trenwow/dropdown/account.dart';
 import 'package:trenwow/dropdown/prof.dart';
 
 class Settings extends StatelessWidget {
@@ -27,6 +28,7 @@ class Settings extends StatelessWidget {
                   backgroundColor: Colors.purple,
                   child: Icon(
                     Icons.person,
+                    color: Colors.black,
                     size: 50,
                   ),
                   radius: 28,
@@ -39,22 +41,28 @@ class Settings extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 9,
           ),
-          ListTile(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            leading: Icon(
-              Icons.key,
-              color: Colors.black,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Accounts()));
+            },
+            child: ListTile(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              leading: Icon(
+                Icons.key,
+                color: Colors.black,
+              ),
+              title: Text(
+                'Account',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+              ),
+              subtitle: Text(
+                'Privacy,security,change number',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              tileColor: Colors.purple[300],
             ),
-            title: Text(
-              'Account',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-            ),
-            subtitle: Text(
-              'Privacy,security,change number',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            tileColor: Colors.purple[300],
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height / 30,

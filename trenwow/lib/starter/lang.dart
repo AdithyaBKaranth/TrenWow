@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:trenwow/splasher/langSplash.dart';
 
 class Lang extends StatefulWidget {
@@ -46,7 +45,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('Hindi'),
+                  child: Text('हिन्दी'),
                   onPressed: () {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => LangSplash()));
@@ -66,7 +65,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('Kannada'),
+                  child: Text('ಕನ್ನಡ'),
                   onPressed: () {
                     var locale = Locale('hi', ';');
                     Get.updateLocale(locale);
@@ -84,7 +83,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('Tamil'),
+                  child: Text('தமிழ்'),
                   onPressed: () {
                     var locale = Locale('hi', '');
                     Get.updateLocale(locale);
@@ -102,7 +101,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('Telugu'),
+                  child: Text('తెలుగు'),
                   onPressed: () {
                     var locale = Locale('hi', '');
                     Get.updateLocale(locale);

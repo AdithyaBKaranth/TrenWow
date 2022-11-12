@@ -71,7 +71,7 @@ class Insider extends StatelessWidget {
             width: 7,
           ),
           PopupMenuButton(
-            color: Colors.pink[100],
+            color: Colors.grey,
             itemBuilder: (context) {
               return contents
                   .map((e) => PopupMenuItem(
@@ -96,7 +96,7 @@ class Insider extends StatelessWidget {
                                     builder: (context) {
                                       return Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
+                                            MainAxisAlignment.center,
                                         children: [
                                           Text(
                                             'Why are you reporting this post?',
@@ -201,7 +201,7 @@ class Insider extends StatelessWidget {
                   IconButton(
                       onPressed: () {
                         showModalBottomSheet(
-                            backgroundColor: Colors.pink[400],
+                            backgroundColor: Colors.purple[300],
                             shape: RoundedRectangleBorder(),
                             isDismissible: true,
                             context: context,
