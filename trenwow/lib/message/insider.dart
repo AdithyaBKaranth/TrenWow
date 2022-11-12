@@ -40,7 +40,7 @@ class Insider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(actions: [
+        appBar: AppBar(backgroundColor: Colors.black12, actions: [
           GestureDetector(
             onTap: () {
               Navigator.of(context)
@@ -174,9 +174,10 @@ class Insider extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             child: Image.asset(
               height: 725,
+              width: 500,
               isAntiAlias: true,
               scale: 100,
-              'https://tse2.mm.bing.net/th?id=OIP.BJ6ZkSENpSced0SeoQR0FAHaQD&pid=Api&P=0',
+              'assets/images/backer.jpg',
               fit: BoxFit.fill,
             ),
           ),

@@ -35,6 +35,7 @@ class _InstabState extends State<Instab> {
       ),
       body: _pages[_selectedPage]['page'],
       bottomNavigationBar: BottomNavigationBar(
+        enableFeedback: true,
         backgroundColor: Colors.black,
         type: BottomNavigationBarType.shifting,
         selectedItemColor: Colors.redAccent[700],

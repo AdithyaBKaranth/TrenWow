@@ -2,13 +2,20 @@ import 'package:flutter/material.dart';
 import '../dropdown/prof.dart';
 import '../message/insider.dart';
 
-class MarketCard extends StatelessWidget {
+class MarketCard extends StatefulWidget {
+  @override
+  State<MarketCard> createState() => _MarketCardState();
+}
+
+class _MarketCardState extends State<MarketCard> {
+  bool _liked = false;
   List<String> contents = [
     'Profile',
     'Add to favourites',
     'Report',
     'Not interested X'
   ];
+
   Widget Texter(String text, BuildContext context) {
     return TextButton(
         onPressed: () {
@@ -53,6 +60,7 @@ class MarketCard extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => Prof()));
                     },
                     child: CircleAvatar(
+                      backgroundColor: Colors.grey,
                       child: Icon(Icons.person),
                     ),
                   ),
@@ -66,14 +74,18 @@ class MarketCard extends StatelessWidget {
                   width: 220,
                 ),
                 PopupMenuButton(
-                  color: Colors.pink[100],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  color: Colors.grey,
                   itemBuilder: (context) {
                     return contents
                         .map((e) => PopupMenuItem(
                             value: e,
                             child: Text(
                               e,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
                             )))
                         .toList();
                   },
@@ -157,8 +169,7 @@ class MarketCard extends StatelessWidget {
                 Container(
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: Image.network(
-                        'https://tse4.mm.bing.net/th?id=OIP.JVRc567bcu6Mm6QbQmY3RAHaHa&pid=Api&P=0'),
+                    child: Image.asset('assets/images/perfume3.jpg'),
                   ),
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
@@ -176,8 +187,7 @@ class MarketCard extends StatelessWidget {
                         Container(
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
-                                  'https://tse2.mm.bing.net/th?id=OIP.Oj1sOgQ5RvHcxD8ITG80nwHaKL&pid=Api&P=0')),
+                              child: Image.asset('assets/images/shirt2.jpg')),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20)),
                           height: MediaQuery.of(context).size.height / 12,
@@ -189,8 +199,7 @@ class MarketCard extends StatelessWidget {
                         Container(
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
-                                  'https://tse2.mm.bing.net/th?id=OIP.OF74Z3s-9kADfrm0pU043AHaEa&pid=Api&P=0')),
+                              child: Image.asset('assets/images/bulb2.jpg')),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20)),
                           height: MediaQuery.of(context).size.height / 12,
@@ -208,8 +217,7 @@ class MarketCard extends StatelessWidget {
                         ),
                         Container(
                           child: ClipRRect(
-                              child: Image.network(
-                                  'https://tse2.mm.bing.net/th?id=OIP.-8MM93iJwSOEIq4C-OE6tQHaE8&pid=Api&P=0'),
+                              child: Image.asset('assets/images/laptop2.jpg'),
                               borderRadius: BorderRadius.circular(20)),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20)),
@@ -222,8 +230,7 @@ class MarketCard extends StatelessWidget {
                         Container(
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.network(
-                                'https://tse1.mm.bing.net/th?id=OIP.Mvy14xR2zlEQSQ-_wWhf3wHaE7&pid=Api&P=0'),
+                            child: Image.asset('assets/images/sofa2.jpg'),
                           ),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20)),
@@ -244,8 +251,17 @@ class MarketCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.favorite_border),
+                  onPressed: () {
+                    setState(() {
+                      _liked = !_liked;
+                    });
+                  },
+                  icon: _liked
+                      ? Icon(
+                          Icons.favorite_rounded,
+                          color: Colors.redAccent[700],
+                        )
+                      : Icon(Icons.favorite_border),
                 ),
                 IconButton(
                   onPressed: () {
@@ -266,9 +282,12 @@ class MarketCard extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('Buy'),
+                  child: Text(
+                    'Buy',
+                    style: TextStyle(color: Colors.deepPurple.shade900),
+                  ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple,
+                    backgroundColor: Colors.deepOrange,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                   ),
@@ -278,9 +297,12 @@ class MarketCard extends StatelessWidget {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => Insider('name')));
                   },
-                  child: Text('Message'),
+                  child: Text(
+                    'Message',
+                    style: TextStyle(color: Colors.blue[900]),
+                  ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple,
+                    backgroundColor: Colors.amber,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                   ),

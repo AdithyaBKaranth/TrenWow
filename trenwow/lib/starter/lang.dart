@@ -17,52 +17,87 @@ class _LangState extends State<Lang> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-                child: Text('English'),
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => LangSplash()));
-                  var locale = Locale('en', 'US');
-                  Get.updateLocale(locale);
-                }),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 20,
+              width: MediaQuery.of(context).size.width / 3,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.purple)),
+                  child: Text('English'),
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => LangSplash()));
+                    var locale = Locale('en', 'US');
+                    Get.updateLocale(locale);
+                  }),
             ),
-            ElevatedButton(
-                child: Text('Hindi'),
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => LangSplash()));
-                  var locale = Locale('hi', 'IN');
-                  Get.updateLocale(locale);
-                }),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 40,
             ),
-            ElevatedButton(
-                child: Text('English'),
-                onPressed: () {
-                  var locale = Locale('hi', ';');
-                  Get.updateLocale(locale);
-                }),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 20,
+              width: MediaQuery.of(context).size.width / 3,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.purple)),
+                  child: Text('Hindi'),
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => LangSplash()));
+                    var locale = Locale('hi', 'IN');
+                    Get.updateLocale(locale);
+                  }),
             ),
-            ElevatedButton(
-                child: Text('English'),
-                onPressed: () {
-                  var locale = Locale('hi', '');
-                  Get.updateLocale(locale);
-                }),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 60,
+              height: MediaQuery.of(context).size.height / 40,
             ),
-            ElevatedButton(
-                child: Text('English'),
-                onPressed: () {
-                  var locale = Locale('hi', '');
-                  Get.updateLocale(locale);
-                })
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 20,
+              width: MediaQuery.of(context).size.width / 3,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.purple)),
+                  child: Text('English'),
+                  onPressed: () {
+                    var locale = Locale('hi', ';');
+                    Get.updateLocale(locale);
+                  }),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 40,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 20,
+              width: MediaQuery.of(context).size.width / 3,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.purple)),
+                  child: Text('English'),
+                  onPressed: () {
+                    var locale = Locale('hi', '');
+                    Get.updateLocale(locale);
+                  }),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 40,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 20,
+              width: MediaQuery.of(context).size.width / 3,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.purple)),
+                  child: Text('English'),
+                  onPressed: () {
+                    var locale = Locale('hi', '');
+                    Get.updateLocale(locale);
+                  }),
+            )
           ],
         ),
       ),

@@ -3,13 +3,20 @@ import 'package:flutter/material.dart';
 import '../dropdown/prof.dart';
 import '../message/insider.dart';
 
-class ForumHolder extends StatelessWidget {
+class ForumHolder extends StatefulWidget {
+  @override
+  State<ForumHolder> createState() => _ForumHolderState();
+}
+
+class _ForumHolderState extends State<ForumHolder> {
+  bool _liked = false;
   List<String> contents = [
     'Profile',
     'Add to favourites',
     'Report',
     'Not interested X'
   ];
+
   Widget Texter(String text, BuildContext context) {
     return TextButton(
         onPressed: () {
@@ -52,6 +59,7 @@ class ForumHolder extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Prof()));
                   },
                   child: CircleAvatar(
+                    backgroundColor: Colors.grey,
                     child: Icon(Icons.person),
                   ),
                 ),
@@ -65,6 +73,8 @@ class ForumHolder extends StatelessWidget {
                 width: 220,
               ),
               PopupMenuButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
                 color: Colors.grey,
                 itemBuilder: (context) {
                   return contents
@@ -72,7 +82,9 @@ class ForumHolder extends StatelessWidget {
                           value: e,
                           child: Text(
                             e,
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),
                           )))
                       .toList();
                 },
@@ -157,8 +169,7 @@ class ForumHolder extends StatelessWidget {
               Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.network(
-                      'https://tse1.mm.bing.net/th?id=OIP.ulUDE5LFJNEHPjj3ZUUyJQHaFm&pid=Api&P=0',
+                  child: Image.asset('assets/images/perfume1.jpg',
                       fit: BoxFit.fill),
                 ),
                 decoration: BoxDecoration(
@@ -178,8 +189,7 @@ class ForumHolder extends StatelessWidget {
                       Container(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                              'https://www.bing.com/th?id=OIP.1HseW4mgi_DggqEUAAAocwHaHa&w=150&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'),
+                          child: Image.asset('assets/images/shirt1.jpg'),
                         ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20)),
@@ -192,8 +202,7 @@ class ForumHolder extends StatelessWidget {
                       Container(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                              'https://th.bing.com/th/id/OIP.enVIbyqinPLXdJRPaGVGXAHaD9?w=266&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+                          child: Image.asset('assets/images/bulb1.jpg'),
                         ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20)),
@@ -213,8 +222,7 @@ class ForumHolder extends StatelessWidget {
                       Container(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                              'https://th.bing.com/th/id/OIP.XrqZ_R7gR2dbjFmUEusv8AHaE-?w=271&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+                          child: Image.asset('assets/images/laptop1.jpg'),
                         ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20)),
@@ -227,8 +235,7 @@ class ForumHolder extends StatelessWidget {
                       Container(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                              'https://tse2.mm.bing.net/th?id=OIP.Fb5f8zu8XlLrxTv-H6r8FgHaFj&pid=Api&P=0'),
+                          child: Image.asset('assets/images/sofa1.jpg'),
                         ),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20)),
@@ -249,8 +256,17 @@ class ForumHolder extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.favorite_border),
+                onPressed: () {
+                  setState(() {
+                    _liked = !_liked;
+                  });
+                },
+                icon: _liked
+                    ? Icon(
+                        Icons.favorite_rounded,
+                        color: Colors.redAccent[700],
+                      )
+                    : Icon(Icons.favorite_border),
               ),
               IconButton(
                 onPressed: () {
