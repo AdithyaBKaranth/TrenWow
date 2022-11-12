@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:trenwow/Signer/sign.dart';
 
 class Load extends StatefulWidget {
@@ -65,7 +66,7 @@ class LoadState extends State<Load> with TickerProviderStateMixin {
             ),
             Center(
               child: Text(
-                'Loading...',
+                'L'.tr,
                 style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:trenwow/main.dart';
 
 class LangSplash extends StatefulWidget {
@@ -31,7 +32,7 @@ class LangSplashState extends State<LangSplash> {
           ),
           Center(
             child: Text(
-              'Please wait...',
+              'PW'.tr,
               style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
