@@ -7,6 +7,8 @@ import 'package:trenwow/starter/load.dart';
 void main() => runApp(TrenWow());
 
 class TrenWow extends StatelessWidget {
+  const TrenWow({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
