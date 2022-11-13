@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:trenwow/splasher/emailSplash.dart';
+import 'package:trenwow/User/themain.dart/splasher/emailSplash.dart';
 
-import '../splasher/userSplash.dart';
+import '../User/themain.dart/splasher/userSplash.dart';
 
 class User extends StatelessWidget {
   @override

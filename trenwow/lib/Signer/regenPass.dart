@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../splasher/resetSplash.dart';
+import '../User/themain.dart/splasher/resetSplash.dart';
 
 class Regenpass extends StatelessWidget {
   @override

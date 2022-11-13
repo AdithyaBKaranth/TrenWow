@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 import 'LocaleString.dart';
-import 'package:trenwow/starter/lang.dart';
-import 'package:trenwow/starter/load.dart';
+import 'package:trenwow/User/themain.dart/starter/lang.dart';
+import 'package:trenwow/User/themain.dart/starter/load.dart';
 
 void main() => runApp(TrenWow());
 

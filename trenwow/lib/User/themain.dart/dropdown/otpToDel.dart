@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:trenwow/User/themain.dart/splasher/deleteSplash.dart';
 import 'package:trenwow/User/themain.dart/splasher/otpSplash.dart';
 
-class OTP extends StatelessWidget {
+class OTPToDel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,8 +69,8 @@ class OTP extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => OTPSplash()));
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => DeleteSplash()));
                     },
                     child: Text("Next ->")),
               ),
