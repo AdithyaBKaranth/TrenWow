@@ -45,7 +45,7 @@ class _LangState extends State<Lang> {
                           borderRadius: BorderRadius.circular(20))),
                       backgroundColor:
                           MaterialStateProperty.all(Colors.purple)),
-                  child: Text('हिंदी'),
+                  child: Text('हिन्दी'),
                   onPressed: () {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => LangSplash()));
