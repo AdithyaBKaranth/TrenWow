@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:trenwow/splasher/emailSplash.dart';
+import 'package:trenwow/User/themain.dart/splasher/emailSplash.dart';
 
 class Company extends StatelessWidget {
   @override

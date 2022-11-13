@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/User/themain.dart/splasher/otpSplash.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:trenwow/User/themain.dart/dropdown/otpToDel.dart';
 
-class OTP extends StatelessWidget {
+class PhoneToDel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,17 +47,16 @@ class OTP extends StatelessWidget {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.height / 3,
-            child: TextField(
-              keyboardType: TextInputType.number,
-              maxLength: 6,
+            child: IntlPhoneField(
+              countries: ['IN'],
+              initialCountryCode: 'IN',
               decoration: InputDecoration(
-                hintText: 'Enter the otp',
-                labelText: 'OTP',
-                hintStyle: TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)),
-              ),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.pink))),
             ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 50,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -68,10 +68,10 @@ class OTP extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all(Colors.orange)),
                     onPressed: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => OTPSplash()));
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => OTPToDel()));
                     },
-                    child: Text("Next ->")),
+                    child: Text("Send OTP")),
               ),
             ],
           )

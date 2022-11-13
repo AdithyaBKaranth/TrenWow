@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/splasher/companygstSplash.dart';
+import 'package:trenwow/company/splasher/companygstSplash.dart';
 
 class CompanyGST extends StatelessWidget {
   @override

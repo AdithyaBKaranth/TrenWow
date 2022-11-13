@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trenwow/splasher/googleSplash.dart';
+import 'package:trenwow/User/themain.dart/splasher/googleSplash.dart';
 
 import 'forgotpass.dart';
 
