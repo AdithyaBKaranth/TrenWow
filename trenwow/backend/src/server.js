@@ -7,10 +7,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('uploads'));
 
-mongoose.connect("mongodb+srv://ij007:NLnB2vd9UQrXL9ac@cluster0.dwkc7ra.mongodb.net/trenwow?retryWrites=true&w=majority").then(function() {
+mongoose.connect("mongodb+srv://iJai007:gN7za480EO6HT713@cluster0.gshc7im.mongodb.net/trial").then(function() {
 //NLnB2vd9UQrXL9ac
     app.get("/", function(req, res) {
-        res.send("trenwow Ecommerce Setup");
+        res.send("Webapp backend");
     });
 
     const userRoutes = require('./routes/user_routes');
